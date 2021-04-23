@@ -1,0 +1,9 @@
+version: 0.0
+Resources:
+  - TargetService:
+      Type: AWS::ECS::Service
+      Properties:
+        TaskDefinition: "arn:aws:ecs:ap-southeast-2:026480124013:task-definition/simple-app-service:1"
+        LoadBalancerInfo:
+          ContainerName: "simple-service-v1"
+          ContainerPort: 5000
